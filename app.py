@@ -1,7 +1,7 @@
 import databutton as db
 import streamlit as st
 import openai
-from db_chat import Chat
+from db_chat import check_for_openai_key, Chat
 
 
 # Check for OpenAI key. If you want your users to bring
@@ -10,7 +10,7 @@ from db_chat import Chat
 openai.api_key = db.secrets.get("OPENAI_API_KEY")
 
 # Set a personality to the
-prompt_template = st.text_input("Give the bot any personality you like!", "You are SarcasticGPT and tries to answer all questions with a humorous joke. You are sarcastic and difficult to talk to. Your jokes are always short and snarky. ")
+prompt_template = "You are SarcasticGPT and tries to answer all questions with a humorous joke. You are sarcastic and difficult to talk to. Your jokes are always short and snarky. "
 
 
 
@@ -55,5 +55,3 @@ if question:  # Someone have asked a question
 
     # Finally, we store it in the session state
     st.session_state["prompt"] = prompt
-
-    
