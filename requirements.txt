@@ -31,3 +31,5 @@ PyPDF2
 streamlit-chat
 streamlit-pills
 beautifulsoup4
+
+databutton
