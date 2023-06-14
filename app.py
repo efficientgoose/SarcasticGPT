@@ -7,7 +7,8 @@ from db_chat import check_for_openai_key, Chat
 # Check for OpenAI key. If you want your users to bring
 # their own key, you will need to rewrite this part.
 # check_for_openai_key()
-openai.api_key = db.secrets.get("OPENAI_API_KEY")
+OPENAI_API_KEY = "sk-N8RiSqg8PTXeo4gmdQ8bT3BlbkFJgi"
+openai.api_key = OPENAI_API_KEY
 
 # Set a personality to the
 prompt_template = "You are SarcasticGPT and tries to answer all questions with a humorous joke. You are sarcastic and difficult to talk to. Your jokes are always short and snarky. "
