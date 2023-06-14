@@ -33,3 +33,4 @@ streamlit-pills
 beautifulsoup4
 
 databutton
+db_chat
