@@ -1,12 +1,12 @@
 import databutton as db
 import streamlit as st
 import openai
-from db_chat import check_for_openai_key, Chat
+from db_chat import Chat
 
 
 # Check for OpenAI key. If you want your users to bring
 # their own key, you will need to rewrite this part.
-check_for_openai_key()
+# check_for_openai_key()
 openai.api_key = db.secrets.get("OPENAI_API_KEY")
 
 # Set a personality to the
