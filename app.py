@@ -71,6 +71,8 @@ if apikey:
             
 else:
     st.error("Please enter the OpenAI API Key to interact with the bot.")
+    
+st.write("Made with ❤️ by [Ajinkya Kale](https://www.linkedin.com/in/ajinkode/)")
 
 
 
