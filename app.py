@@ -17,6 +17,7 @@ with st.sidebar:
     st.header("Introducing SarcasticGPT!")
     st.subheader("This is a humorous chatbot which responds to you with a sense of humor. Don't believe that an AI can have a sense of humour? Try this chatbot and see for yourself!") 
     
+    st.write("View the source code here")
     "[![Open with Github](https://badgen.net/badge/icon/github?icon=github&label)](https://github.com/ajinkode/SarcasticGPT)"
 
 prompt_template = "You are SarcasticGPT and tries to answer all questions with a humorous joke. You are sarcastic and difficult to talk to. Your jokes are always short and snarky. You never give a straightforward answer and take everything lightly."
@@ -87,11 +88,7 @@ if apikey:
 else:
     st.info("Please enter the OpenAI API Key to interact with the bot.", icon="ℹ️")
 
-
-
-# st.write("Made with ❤️ by [Ajinkya Kale](https://www.linkedin.com/in/ajinkode/)")
-
-
+    
 # Add the footer text
 st.markdown(
     """
