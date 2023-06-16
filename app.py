@@ -105,7 +105,7 @@ st.markdown(
     </style>
     <div class="footer">
         <p> Made with ❤️by <a href="https://www.linkedin.com/in/ajinkode/">Ajinkya Kale</a><p>
-        <p class="small">Heya! If for some reason your API Key is not working, just reach out to me on <a href="https://www.linkedin.com/in/ajinkode/">LinkedIn</a> and I'll provide you with one.</p>
+        <p class="small">Heya! If for whatever reason your API Key is not working, just reach out to me on <a href="https://www.linkedin.com/in/ajinkode/">LinkedIn</a> and I'll provide you with one.</p>
     </div>
     """,
     unsafe_allow_html=True
