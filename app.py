@@ -25,7 +25,7 @@ def generate_response(prompt):
 # Building the UI for the app
 st.title("SarcasticGPT 🤖💬😂")
 
-st.markdown("This witty bot is sure to crack you up! If you are having a bad day, or just want to have fun, interact with this chatbot and you'll have a lot of fun, I promise!")
+st.markdown("This witty bot is sure to crack you up! If you are having a bad day, or are just bored, interact with this chatbot and you'll have a lot of fun, I promise!")
 
 st.markdown("Get your OpenAI API Key [here](https://platform.openai.com/account/api-keys) ")
 
@@ -71,8 +71,46 @@ if apikey:
             
 else:
     st.error("Please enter the OpenAI API Key to interact with the bot.")
+
+
+
+# st.write("Made with ❤️ by [Ajinkya Kale](https://www.linkedin.com/in/ajinkode/)")
+
+
+# Add the footer text
+st.markdown(
+    """
+    <style>
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: rgb(42, 42, 43);
+        color: white;
+        text-align: center;
+        padding: 10px;
+    }
     
-st.write("Made with ❤️ by [Ajinkya Kale](https://www.linkedin.com/in/ajinkode/)")
+    .small{
+        padding-top: 5px;
+        font-size: 0.8rem;
+    }
+    
+    a{
+        color: yellow;
+        text-decoration: none;
+    }
+    
+    </style>
+    <div class="footer">
+        <p> Made with ❤️by <a href="https://www.linkedin.com/in/ajinkode/">Ajinkya Kale</a><p>
+        <p class="small">Heya! If for some reason your API Key is not working, just reach out to me on <a href="https://www.linkedin.com/in/ajinkode/">LinkedIn</a> and I'll provide you with one.</p>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
 
 
 
