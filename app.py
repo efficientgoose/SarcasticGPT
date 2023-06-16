@@ -94,7 +94,7 @@ st.markdown(
     
     .small{
         padding-top: 5px;
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
     
     a{
