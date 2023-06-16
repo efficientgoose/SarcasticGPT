@@ -14,7 +14,8 @@ st.set_page_config(page_title='SarcasticGPT', page_icon = "./chat.ico", initial_
 # while a lower temperature will result in more predictable responses.
 
 with st.sidebar:
-    st.subheader("Introducing SarcasticGPT! This chatbot uses the same model as that of ChatGPT, is very robust and powerful. The only peculiar thing is that is has a humourous personality!")
+    st.subheader("Introducing SarcasticGPT!")
+    st.subheader("This is a humorous chatbot which responds to you with a sense of humor. Don't belive that an AI can have a sense of humour? Try this chatbot then and see for yourself!") 
     
     "[![Open with Github](https://badgen.net/badge/icon/github?icon=github&label)](https://github.com/ajinkode/SarcasticGPT)"
 
