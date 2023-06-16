@@ -25,7 +25,7 @@ def generate_response(prompt):
 # Building the UI for the app
 st.title("SarcasticGPT 🤖💬😂")
 
-st.markdown("This witty bot is sure to crack you up! If you are having a bad day, or are just bored, interact with this chatbot and you'll have a lot of fun, I promise!")
+st.caption("This witty bot is sure to crack you up! If you are having a bad day, or are just bored, interact with this chatbot and you'll have a lot of fun, I promise!")
 
 st.markdown("Get your OpenAI API Key [here](https://platform.openai.com/account/api-keys) ")
 
