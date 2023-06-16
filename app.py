@@ -2,6 +2,9 @@ import openai
 import streamlit as st
 from streamlit_chat import message
 
+# Configuring page details
+st.set_page_config(page_title='SarcasticGPT', page_icon = "./chat.ico", initial_sidebar_state = 'auto')
+
 
 
 # This function uses the OpenAI Completion API to generate a 
@@ -116,3 +119,7 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
+
+
+
