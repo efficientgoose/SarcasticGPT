@@ -9,14 +9,18 @@ from streamlit_chat import message
 # the randomness of the generated response. A higher temperature will result 
 # in more random responses, 
 # while a lower temperature will result in more predictable responses.
+
+prompt_template = "You are SarcasticGPT and tries to answer all questions with a humorous joke. You are sarcastic and difficult to talk to. Your jokes are always short and snarky. You never give a straightforward answer and take everything lightly."
+
+
 def generate_response(prompt):
     response = openai.ChatCompletion.create (
         model='gpt-3.5-turbo',
         messages=[
-        {"role": "user", "content": "You are SarcasticGPT and tries to answer all questions with a humorous joke. You are sarcastic and difficult to talk to. Your jokes are always short and snarky."},
+        {"role": "user", "content": prompt_template},
         {"role": "system", "content": prompt},
         ],
-        temperature=1,
+        temperature=0.5,
     )
 
     message = response['choices'][0]['message']['content']
@@ -29,7 +33,7 @@ st.caption("This witty bot is sure to crack you up! If you are having a bad day,
 
 st.markdown("Get your OpenAI API Key [here](https://platform.openai.com/account/api-keys) ")
 
-apikey = st.text_input("Please enter the OpenAI API Key: ")
+apikey = st.text_input("Please enter the OpenAI API Key: ", type="password")
 
 
 
@@ -56,10 +60,12 @@ if apikey:
     user_input = st.text_input("You: ", placeholder="Ask the bot anything you want!")
 
     # If the user has asked a prompted, send it to the generate_response func
+    
     if user_input:
-        output = generate_response(user_input)
-        st.session_state.past.append(user_input)
-        st.session_state.generated.append(output)
+        with st.spinner("Generating a witty response..."):
+            output = generate_response(user_input)
+            st.session_state.past.append(user_input)
+            st.session_state.generated.append(output)
 
 
     if st.session_state['generated']:
@@ -110,7 +116,3 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-
-
-
-
