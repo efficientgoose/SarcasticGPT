@@ -43,7 +43,7 @@ st.caption("This witty bot is sure to crack you up! If you are having a bad day,
 
 st.markdown("Get your OpenAI API Key [here](https://platform.openai.com/account/api-keys) ")
 
-apikey = st.text_input("Please enter the OpenAI API Key: ", type="password")
+apikey = st.text_input("Please enter the OpenAI API Key: ", placeholder="sk-...", "type="password")
 
 
 
