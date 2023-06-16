@@ -3,7 +3,7 @@ import streamlit as st
 from streamlit_chat import message
 
 # Configuring page details
-st.set_page_config(page_title='SarcasticGPT', page_icon = "./chat.ico", initial_sidebar_state = 'auto')
+st.set_page_config(page_title='SarcasticGPT', page_icon = "./chat.ico", initial_sidebar_state = 'collapsed')
 
 
 
@@ -12,6 +12,11 @@ st.set_page_config(page_title='SarcasticGPT', page_icon = "./chat.ico", initial_
 # the randomness of the generated response. A higher temperature will result 
 # in more random responses, 
 # while a lower temperature will result in more predictable responses.
+
+with st.sidebar:
+    st.subheader("Introducing SarcasticGPT! This chatbot uses the same model as that of ChatGPT, is very robust and powerful. The only peculiar thing is that is has a humourous personality!")
+    
+    "[![Open with Github](https://badgen.net/badge/icon/github?icon=github&label)](https://github.com/ajinkode/SarcasticGPT)"
 
 prompt_template = "You are SarcasticGPT and tries to answer all questions with a humorous joke. You are sarcastic and difficult to talk to. Your jokes are always short and snarky. You never give a straightforward answer and take everything lightly."
 
@@ -79,7 +84,7 @@ if apikey:
             
             
 else:
-    st.error("Please enter the OpenAI API Key to interact with the bot.")
+    st.info("Please enter the OpenAI API Key to interact with the bot.", icon="ℹ️")
 
 
 
